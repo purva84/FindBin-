@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import { WasteCategory, UserIntent, Organization, RequestItem } from '../../types';
 import { RULE_BASED_TIPS } from '../../data/mockData';
-import { AiCategoryModal } from '../common/AiCategoryModal';
 import {
-  Sparkles,
   CheckCircle2,
   Building2,
   Calendar,
@@ -63,7 +61,6 @@ export const CreateRequestView: React.FC = () => {
   const [pickupTime, setPickupTime] = useState('10:00 AM – 12:00 PM');
   const [instructions, setInstructions] = useState('Please call before arriving.');
   const [selectedOrg, setSelectedOrg] = useState<Organization | null>(preselectedOrgForRequest || null);
-  const [aiModalOpen, setAiModalOpen] = useState(false);
   const [submittedRequest, setSubmittedRequest] = useState<RequestItem | null>(null);
 
   // If navigated from Organization card with preselectedOrg
@@ -239,23 +236,11 @@ export const CreateRequestView: React.FC = () => {
         {/* ================= STEP 1 ================= */}
         {step === 1 && (
           <div className="space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-200 pb-4">
-              <div>
-                <h2 className="text-xl font-extrabold text-stone-900">What do you have?</h2>
-                <p className="text-xs text-stone-500 mt-0.5">
-                  Select the category that best describes your material.
-                </p>
-              </div>
-
-              {/* Optional AI Assistant Button */}
-              <button
-                type="button"
-                onClick={() => setAiModalOpen(true)}
-                className="inline-flex items-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300/80 px-3.5 py-2 rounded-xl text-xs font-bold transition-all shadow-2xs self-start sm:self-auto cursor-pointer"
-              >
-                <Sparkles className="w-4 h-4 text-emerald-600" />
-                <span>Not sure what category this is?</span>
-              </button>
+            <div className="border-b border-stone-200 pb-4">
+              <h2 className="text-xl font-extrabold text-stone-900">What do you have?</h2>
+              <p className="text-xs text-stone-500 mt-0.5">
+                Select the category that best describes your material.
+              </p>
             </div>
 
             {/* Waste Category Selection */}
@@ -816,18 +801,6 @@ export const CreateRequestView: React.FC = () => {
           </div>
         )}
       </div>
-
-      {/* Optional AI Assistant Modal */}
-      <AiCategoryModal
-        isOpen={aiModalOpen}
-        onClose={() => setAiModalOpen(false)}
-        onApplyCategory={(suggestedCat, itemTitle) => {
-          setCategory(suggestedCat);
-          if (itemTitle) {
-            setDescription(itemTitle);
-          }
-        }}
-      />
     </div>
   );
 };

@@ -151,15 +151,6 @@ export interface Complaint {
   updatedAt?: string;
 }
 
-export interface AiCategorySuggestion {
-  suggestedCategory: WasteCategory;
-  detectedItem: string;
-  specialHandlingWarning: string;
-  suggestedHandling: string;
-  confidence?: number;
-  source?: string;
-  note?: string;
-}
 
 export type NotificationType =
   | 'confirmation'

@@ -4,7 +4,7 @@ FindBin is a full-stack platform connecting individual users, businesses, and ma
 
 ## Features
 
-- **Smart Material Categorization**: AI-powered category classification (using Google Gemini 2.5 Flash with rule-based offline fallbacks) to accurately direct items to appropriate handlers.
+- **Smart Material Categorization**: Category classification to accurately direct items to appropriate handlers.
 - **Dual Portal Experience**: 
   - **Individual / Business User**: Browse certified organizations, create material pickup/drop-off requests, track request journeys in real-time, and leave verified ratings.
   - **Collection Organization**: Manage incoming pickup requests, schedule collectors, monitor collector availability, view ratings, and update request statuses.
@@ -15,7 +15,6 @@ FindBin is a full-stack platform connecting individual users, businesses, and ma
 
 - **Frontend**: React 19, TypeScript, Tailwind CSS, Lucide Icons, Framer Motion
 - **Backend Server**: Node.js, Express, TypeScript (`tsx`)
-- **AI Engine**: `@google/genai` (Gemini API Integration)
 - **Bundler**: Vite
 
 ## Getting Started
@@ -35,7 +34,6 @@ FindBin is a full-stack platform connecting individual users, businesses, and ma
 2. Configure Environment Variables:
    Create a `.env` file in the root directory (refer to `.env.example`):
    ```env
-   GEMINI_API_KEY="your_gemini_api_key_here"
    PORT=3000
    ```
 
