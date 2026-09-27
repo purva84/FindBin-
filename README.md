@@ -1,4 +1,6 @@
+Recommended README structure
 # ♻️ FindBin
+
 ### Smart Waste Collection & Recycling Platform
 
 FindBin connects people who want to dispose of or sell waste with
@@ -7,6 +9,7 @@ collection organizations that can manage and collect it.
 ---
 
 ## 🚨 Problem
+
 People often don't know how to dispose of different types of waste
 or where to request the appropriate collection service.
 
@@ -91,35 +94,47 @@ waste collection.
 
 ## 🛠️ Tech Stack
 
-- Frontend: [your technology]
-- Backend: [your technology]
-- Database: [your database]
-- Authentication: [if used]
-- Deployment: Google Cloud Run
+## Tech Stack
+
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Node.js + Express.js
+- REST API
+- dotenv
+- Google Cloud Run
 
 ---
 
 ## 🏗️ Project Architecture
 
-[Add a simple architecture diagram here]
+```text
+                    FIND BIN
+                       │
+        ┌──────────────┴──────────────┐
+        │                             │
+      USER                  COLLECTION ORGANIZATION
+        │                             │
+        ▼                             ▼
+   Create Waste                  View Requests
+   Collection Request             Manage Requests
+        │                             │
+        ▼                             ▼
+   Waste Details                  Collection Info
+   Quantity                       Pickup Details
+   Address                        User Details
+   Pickup Date & Time
+   Sell / Throw
+        │
+        └──────────────┬──────────────┘
+                       ▼
+              Waste Collection
+                       │
+                       ▼
+             Recycling / Disposal
 
-User
- ↓
-Frontend
- ↓
-Backend / API
- ↓
-Database
- ↓
-Collection Organization Dashboard
 
----
 
-### Installation
+🌐 Live Demo
+Deployed Application: [Google Cloud Run URL]
 
-```bash
-git clone [repository-url]
-
-cd FindBin
-
-[installation command]
