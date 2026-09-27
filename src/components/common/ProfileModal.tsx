@@ -94,7 +94,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) =
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight">
-                  {user.name}
+                  {user.name || 'Complete Your Profile'}
                 </h2>
                 <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
                   <ShieldCheck className="w-3 h-3 text-emerald-600" />
@@ -103,9 +103,13 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) =
               </div>
               <p className="text-xs text-stone-500 mt-1 flex items-center gap-2 font-medium">
                 <Mail className="w-3.5 h-3.5 text-stone-400" />
-                <span>{user.email}</span>
-                <span>•</span>
-                <span>{user.city}</span>
+                <span>{user.email || 'No email set'}</span>
+                {user.city && (
+                  <>
+                    <span>•</span>
+                    <span>{user.city}</span>
+                  </>
+                )}
               </p>
             </div>
           </div>
@@ -153,8 +157,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) =
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your full name"
                   className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium"
-                  required
                 />
               </div>
 
@@ -166,8 +170,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) =
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
                   className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium"
-                  required
                 />
               </div>
 
@@ -179,8 +183,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) =
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
+                  placeholder="e.g. +91 98765 43210"
                   className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium"
-                  required
                 />
               </div>
 
@@ -192,8 +196,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) =
                   type="text"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
+                  placeholder="e.g. Pune"
                   className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium"
-                  required
                 />
               </div>
 
@@ -205,8 +209,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) =
                   type="text"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
+                  placeholder="Enter your full street address & landmark"
                   className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium"
-                  required
                 />
               </div>
             </div>

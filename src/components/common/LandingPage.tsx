@@ -4,17 +4,8 @@ import {
   Building2,
   User,
   ArrowRight,
-  ShieldCheck,
-  Truck,
-  Sparkles,
   CheckCircle2,
-  DollarSign,
-  HeartHandshake,
-  BarChart3,
-  CalendarCheck,
   ChevronRight,
-  LogIn,
-  UserPlus,
 } from 'lucide-react';
 
 interface LandingPageProps {
@@ -37,36 +28,21 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
               <div className="flex items-center gap-1.5 font-extrabold text-xl text-stone-900 tracking-tight leading-none">
                 FindBin <span className="text-emerald-600">♻️</span>
               </div>
-              <div className="text-[11px] text-stone-500 font-medium tracking-tight">
+              <div className="text-xs sm:text-sm text-stone-500 font-medium tracking-tight">
                 Find the right place for what you no longer need
               </div>
             </div>
           </div>
 
-          {/* Quick Header CTA */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            <button
-              onClick={() => onOpenAuth('login', 'user')}
-              className="text-stone-700 hover:text-stone-950 font-bold text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-xl hover:bg-stone-100 transition-colors cursor-pointer"
-            >
-              Sign In
-            </button>
-            <button
-              onClick={() => onOpenAuth('signup', 'user')}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl transition-all shadow-xs cursor-pointer flex items-center gap-1.5"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
+
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24 bg-linear-to-b from-stone-100/60 via-stone-50 to-white border-b border-stone-200/80">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-900 border border-emerald-300">
-            <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-emerald-100 text-emerald-900 border border-emerald-300">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse" />
             <span>Two-Sided Waste & Material Recovery Platform</span>
           </div>
 
@@ -77,12 +53,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
             </span>
           </h1>
 
-          <p className="text-stone-600 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-stone-600 text-base sm:text-xl max-w-3xl mx-auto leading-relaxed">
             Whether you have electronics, old textiles, scrap metal, sorted plastics, cartons, or hazardous inverter cells — find certified organizations to collect, buy, recycle, or donate responsibly.
           </p>
 
           {/* Interactive Role Switch Cards */}
-          <div className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto text-left">
+          <div className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto text-left">
             {/* User Option */}
             <div className="bg-white rounded-3xl p-6 sm:p-7 border-2 border-stone-200 hover:border-emerald-600 hover:shadow-lg transition-all group flex flex-col justify-between">
               <div className="space-y-3">
@@ -90,13 +66,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
                   <User className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700">For Individuals & Households</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">For Individuals & Households</span>
                   <h3 className="text-xl font-extrabold text-stone-900 mt-0.5">I have unwanted materials</h3>
                 </div>
-                <p className="text-xs text-stone-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-stone-600 leading-relaxed">
                   Request doorstep pickup or depot drop-off. Sell for scrap value or give away for ethical recycling and donation.
                 </p>
-                <div className="text-xs text-stone-500 space-y-1.5 pt-2">
+                <div className="text-sm sm:text-base text-stone-600 space-y-2 pt-2">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>Free pickups & verified scrap buyers</span>
@@ -112,19 +88,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
                 </div>
               </div>
 
-              <div className="pt-6 flex items-center gap-3">
+              <div className="pt-6">
                 <button
                   onClick={() => onOpenAuth('signup', 'user')}
-                  className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-3 rounded-xl transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base py-3.5 px-6 rounded-xl transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Join as User</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => onOpenAuth('login', 'user')}
-                  className="bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-xs py-3 px-4 rounded-xl transition-colors cursor-pointer"
-                >
-                  User Login
                 </button>
               </div>
             </div>
@@ -136,13 +106,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
                   <Building2 className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-stone-500">For Recyclers & Collectors</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-stone-500">For Recyclers & Collectors</span>
                   <h3 className="text-xl font-extrabold text-stone-900 mt-0.5">I am a collection organization</h3>
                 </div>
-                <p className="text-xs text-stone-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-stone-600 leading-relaxed">
                   Receive pre-segregated material requests, manage pickup schedules, assign field drivers, and expand your procurement pipeline.
                 </p>
-                <div className="text-xs text-stone-500 space-y-1.5 pt-2">
+                <div className="text-sm sm:text-base text-stone-600 space-y-2 pt-2">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>Define accepted categories & scrap rates</span>
@@ -158,19 +128,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
                 </div>
               </div>
 
-              <div className="pt-6 flex items-center gap-3">
+              <div className="pt-6">
                 <button
                   onClick={() => onOpenAuth('signup', 'organization')}
-                  className="flex-1 bg-stone-900 hover:bg-stone-800 text-white font-bold text-xs py-3 rounded-xl transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm sm:text-base py-3.5 px-6 rounded-xl transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Register Facility</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => onOpenAuth('login', 'organization')}
-                  className="bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-xs py-3 px-4 rounded-xl transition-colors cursor-pointer"
-                >
-                  Org Portal
                 </button>
               </div>
             </div>
@@ -182,13 +146,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
       <section className="py-16 bg-white border-b border-stone-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+            <span className="text-sm font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
               The FindBin Workflow
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
               From unwanted waste to verified recovery in 5 simple steps
             </h2>
-            <p className="text-xs sm:text-sm text-stone-500">
+            <p className="text-sm sm:text-base text-stone-600">
               A transparent, closed-loop process designed for convenience and zero landfill leakage.
             </p>
           </div>
@@ -225,17 +189,17 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
                 desc: 'Material reaches recycling/repair; you receive confirmation and leave feedback.',
                 icon: '♻️',
               },
-            ].map((item, idx) => (
+            ].map((item) => (
               <div
                 key={item.step}
                 className="bg-stone-50 p-5 rounded-2xl border border-stone-200 hover:border-emerald-300 transition-all space-y-2 relative"
               >
-                <div className="flex items-center justify-between text-stone-400 font-mono text-xs font-bold">
+                <div className="flex items-center justify-between text-stone-500 font-mono text-xs sm:text-sm font-bold">
                   <span>STEP {item.step}</span>
                   <span className="text-2xl">{item.icon}</span>
                 </div>
-                <h4 className="font-extrabold text-stone-900 text-sm">{item.title}</h4>
-                <p className="text-xs text-stone-600 leading-relaxed">{item.desc}</p>
+                <h4 className="font-extrabold text-stone-900 text-base">{item.title}</h4>
+                <p className="text-sm text-stone-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -247,7 +211,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-1">
-              <span className="text-xs font-bold text-emerald-800 uppercase tracking-widest">
+              <span className="text-sm font-bold text-emerald-800 uppercase tracking-widest">
                 Comprehensive Segregation
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
@@ -256,7 +220,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
             </div>
             <button
               onClick={onExploreDirectory}
-              className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1 cursor-pointer self-start sm:self-auto"
+              className="text-sm sm:text-base font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1 cursor-pointer self-start sm:self-auto"
             >
               <span>Explore certified directory</span>
               <ChevronRight className="w-4 h-4" />
@@ -281,8 +245,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
                 className="bg-white p-4 rounded-2xl border border-stone-200 hover:border-emerald-400 hover:shadow-xs transition-all space-y-1"
               >
                 <div className="text-2xl">{cat.icon}</div>
-                <h4 className="font-extrabold text-stone-900 text-xs">{cat.label}</h4>
-                <p className="text-[11px] text-stone-500 leading-tight">{cat.desc}</p>
+                <h4 className="font-extrabold text-stone-900 text-sm sm:text-base">{cat.label}</h4>
+                <p className="text-xs sm:text-sm text-stone-600 leading-tight">{cat.desc}</p>
               </div>
             ))}
           </div>
@@ -294,13 +258,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-emerald-950 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden space-y-6">
             <div className="max-w-2xl space-y-3 relative z-10">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-300 bg-emerald-900/60 px-3 py-1 rounded-full border border-emerald-800">
+              <span className="text-sm font-bold uppercase tracking-wider text-emerald-300 bg-emerald-900/60 px-3 py-1 rounded-full border border-emerald-800">
                 Guaranteed Transparency
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
                 No blind handovers. You always know where your material ends up.
               </h2>
-              <p className="text-stone-300 text-xs sm:text-sm leading-relaxed">
+              <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
                 Unlike informal waste dumping, every organization on FindBin must disclose their audited processing narrative — whether dismantling microchips for rare-earth metals, shredding textiles into acoustic insulation, or composting organic kitchen waste into certified bio-fertilizer.
               </p>
             </div>
@@ -308,13 +272,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
             <div className="pt-2 flex flex-wrap gap-3 relative z-10">
               <button
                 onClick={() => onOpenAuth('signup', 'user')}
-                className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-md cursor-pointer"
+                className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-sm sm:text-base px-6 py-3 rounded-xl transition-all shadow-md cursor-pointer"
               >
                 Start Recycling Now
               </button>
               <button
                 onClick={() => onOpenAuth('signup', 'organization')}
-                className="bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition-all border border-white/20 cursor-pointer"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold text-sm sm:text-base px-5 py-3 rounded-xl transition-all border border-white/20 cursor-pointer"
               >
                 Register as Recovery Facility
               </button>
@@ -328,14 +292,14 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onOpenAuth, onExploreD
       </section>
 
       {/* Footer */}
-      <footer className="mt-auto bg-stone-900 text-stone-400 py-8 border-t border-stone-800 text-xs">
+      <footer className="mt-auto bg-stone-900 text-stone-400 py-8 border-t border-stone-800 text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">
               ♻️
             </div>
-            <span className="font-extrabold text-stone-100 text-sm">FindBin</span>
-            <span className="text-stone-500">· Find the right place for what you no longer need.</span>
+            <span className="font-extrabold text-stone-100 text-base">FindBin</span>
+            <span className="text-stone-400">· Find the right place for what you no longer need.</span>
           </div>
 
           <div className="flex items-center gap-4 text-stone-400">

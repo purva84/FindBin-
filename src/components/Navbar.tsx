@@ -192,33 +192,6 @@ export const Navbar: React.FC<NavbarProps> = () => {
 
             {/* Right Controls */}
             <div className="flex items-center gap-2 sm:gap-3">
-              {/* Role Toggle */}
-              <div className="flex items-center bg-stone-100 p-1 rounded-xl border border-stone-200">
-                <button
-                  onClick={() => setCurrentRole('user')}
-                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                    currentRole === 'user'
-                      ? 'bg-white text-emerald-800 shadow-xs border border-stone-200/60'
-                      : 'text-stone-600 hover:text-stone-900'
-                  }`}
-                >
-                  <User className="w-3 h-3 text-emerald-600" />
-                  <span className="hidden sm:inline">User</span>
-                </button>
-
-                <button
-                  onClick={() => setCurrentRole('organization')}
-                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                    currentRole === 'organization'
-                      ? 'bg-white text-emerald-800 shadow-xs border border-stone-200/60'
-                      : 'text-stone-600 hover:text-stone-900'
-                  }`}
-                >
-                  <Building2 className="w-3 h-3 text-emerald-600" />
-                  <span className="hidden sm:inline">Org</span>
-                </button>
-              </div>
-
               {/* Notification Bell Icon */}
               <div className="relative">
                 <button

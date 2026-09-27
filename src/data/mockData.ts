@@ -1,18 +1,15 @@
 import { Organization, RequestItem, Collector, Feedback, Complaint, UserProfile, WasteCategory, AppNotification } from '../types';
 
 export const INITIAL_USER: UserProfile = {
-  id: 'usr_rahul_1',
-  name: 'Rahul Sharma',
-  email: 'rahul.sharma@example.com',
-  phone: '+91 98200 45678',
-  address: 'Flat 402, Green Meadows, Baner Road',
-  city: 'Pune',
+  id: 'usr_new_1',
+  name: '',
+  email: '',
+  phone: '',
+  address: '',
+  city: '',
   role: 'user',
-  savedAddresses: [
-    'Flat 402, Green Meadows, Baner Road, Pune - 411045',
-    'Office 12B, Tech Park, Hinjawadi Phase 1, Pune - 411057'
-  ],
-  createdAt: '2026-08-15T09:00:00Z',
+  savedAddresses: [],
+  createdAt: new Date().toISOString(),
 };
 
 export const DEMO_ORGANIZATIONS: Organization[] = [
