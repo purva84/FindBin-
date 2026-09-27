@@ -1,5 +1,4 @@
 # ♻️ FindBin
-
 ### Smart Waste Collection & Recycling Platform
 
 FindBin connects people who want to dispose of or sell waste with
@@ -8,7 +7,6 @@ collection organizations that can manage and collect it.
 ---
 
 ## 🚨 Problem
-
 People often don't know how to dispose of different types of waste
 or where to request the appropriate collection service.
 
